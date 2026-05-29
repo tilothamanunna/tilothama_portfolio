@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Skills | Tilothama Nunna</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo"><strong>TN</strong></div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="skills.html" class="active">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="resume.html">Resume</a>
+            <a href="contact.html">Contact</a>
+            <button id="theme-btn">◐</button>
+        </div>
+    </nav>
+
+    <style>
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+        padding: 1rem 0;
+    }
+
+    .skill-card {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        padding: 1.5rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .skill-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        border-color: var(--accent);
+    }
+
+    .badge-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 1rem;
+    }
+
+    .badge-container img {
+        height: 28px;
+        border-radius: 4px;
+    }
+
+    .category-title {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    </style>
+
+    <section>
+        <h1 style="font-size: 2.5rem; margin-bottom: 2rem; text-align: center;">Technical Expertise</h1>
+
+        <div class="skills-grid">
+
+            <!-- Frontend -->
+            <div class="skill-card">
+                <h3 class="category-title" style="color: #61DAFB;">Frontend Development</h3>
+                <div class="badge-container">
+                    <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5">
+                    <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3">
+                </div>
+            </div>
+
+            <!-- Backend & Programming -->
+            <div class="skill-card">
+                <h3 class="category-title" style="color: #3776AB;">Backend & Core Languages</h3>
+                <div class="badge-container">
+                    <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">
+                    <img src="https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white" alt="Java">
+                    <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=c%2B%2B&logoColor=white" alt="C++">
+                    <img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="SQL">
+                    <img src="https://img.shields.io/badge/COBOL-005C92?style=flat-square" alt="COBOL">
+                </div>
+            </div>
+
+            <!-- Mainframe & Enterprise — updated -->
+            <div class="skill-card">
+                <h3 class="category-title" style="color: #052FAD;">Enterprise & Mainframe</h3>
+                <div class="badge-container">
+                    <img src="https://img.shields.io/badge/IBM_z/OS-052FAD?style=flat-square&logo=ibm&logoColor=white" alt="z/OS">
+                    <img src="https://img.shields.io/badge/DB2-052FAD?style=flat-square&logo=ibm&logoColor=white" alt="DB2">
+                    <img src="https://img.shields.io/badge/CICS-052FAD?style=flat-square&logo=ibm&logoColor=white" alt="CICS">
+                    <img src="https://img.shields.io/badge/VSAM-052FAD?style=flat-square" alt="VSAM">
+                    <img src="https://img.shields.io/badge/JCL-052FAD?style=flat-square" alt="JCL">
+                    <img src="https://img.shields.io/badge/REXX-052FAD?style=flat-square" alt="REXX">
+                    <img src="https://img.shields.io/badge/TSO-052FAD?style=flat-square" alt="TSO">
+                    <img src="https://img.shields.io/badge/ISPF-052FAD?style=flat-square" alt="ISPF">
+                    <img src="https://img.shields.io/badge/Vision_PLUS-005A9C?style=flat-square" alt="Vision Plus">
+                </div>
+            </div>
+
+            <!-- Data & Analytics — updated -->
+            <div class="skill-card">
+                <h3 class="category-title" style="color: #E97627;">Data & Analytics</h3>
+                <div class="badge-container">
+                    <img src="https://img.shields.io/badge/Data_Analysis-E97627?style=flat-square" alt="Data Analysis">
+                    <img src="https://img.shields.io/badge/Data_Cleaning-E97627?style=flat-square" alt="Data Cleaning">
+                    <img src="https://img.shields.io/badge/ETL-E97627?style=flat-square" alt="ETL">
+                    <img src="https://img.shields.io/badge/Data_Visualization-E97627?style=flat-square" alt="Data Visualization">
+                    <img src="https://img.shields.io/badge/Business_Intelligence-E97627?style=flat-square" alt="Business Intelligence">
+                    <img src="https://img.shields.io/badge/Statistical_Modeling-E97627?style=flat-square" alt="Statistical Modeling">
+                </div>
+            </div>
+
+            <!-- BI Tools -->
+            <div class="skill-card">
+                <h3 class="category-title" style="color: #E97627;">BI Tools</h3>
+                <div class="badge-container">
+                    <img src="https://img.shields.io/badge/Tableau-E97627?style=flat-square&logo=tableau&logoColor=white" alt="Tableau">
+                    <img src="https://img.shields.io/badge/Power_BI-F2C811?style=flat-square&logo=microsoftpowerbi&logoColor=black" alt="Power BI">
+                    <img src="https://img.shields.io/badge/SAS_Viya-007CC3?style=flat-square&logo=sas&logoColor=white" alt="SAS">
+                    <img src="https://img.shields.io/badge/Excel-217346?style=flat-square&logo=microsoftexcel&logoColor=white" alt="Excel">
+                    <img src="https://img.shields.io/badge/RStudio-75AADB?style=flat-square&logo=rstudio&logoColor=white" alt="RStudio">
+                </div>
+            </div>
+
+            <!-- AI / ML — new section -->
+            <div class="skill-card">
+                <h3 class="category-title" style="color: #A855F7;">AI / Machine Learning</h3>
+                <div class="badge-container">
+                    <img src="https://img.shields.io/badge/Machine_Learning-A855F7?style=flat-square" alt="Machine Learning">
+                    <img src="https://img.shields.io/badge/Predictive_Modeling-A855F7?style=flat-square" alt="Predictive Modeling">
+                    <img src="https://img.shields.io/badge/Healthcare_Analytics-A855F7?style=flat-square" alt="Healthcare Analytics">
+                    <img src="https://img.shields.io/badge/AI_App_Development-A855F7?style=flat-square" alt="AI Application Development">
+                </div>
+            </div>
+
+            <!-- Cloud & Tools — updated -->
+            <div class="skill-card">
+                <h3 class="category-title" style="color: #81B5A1;">Cloud & Tools</h3>
+                <div class="badge-container">
+                    <img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonaws&logoColor=white" alt="AWS">
+                    <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git">
+                    <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub">
+                    <img src="https://img.shields.io/badge/Render-46E3B7?style=flat-square&logo=render&logoColor=white" alt="Render">
+                    <img src="https://img.shields.io/badge/Replit-667881?style=flat-square&logo=replit&logoColor=white" alt="Replit">
+                    <img src="https://img.shields.io/badge/REST_APIs-005C97?style=flat-square" alt="REST APIs">
+                    <img src="https://img.shields.io/badge/Jira-0052CC?style=flat-square&logo=jirasoftware&logoColor=white" alt="Jira">
+                    <img src="https://img.shields.io/badge/ServiceNow-81B5A1?style=flat-square&logo=servicenow&logoColor=white" alt="ServiceNow">
+                    <img src="https://img.shields.io/badge/Control--M-007BC3?style=flat-square" alt="Control-M">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

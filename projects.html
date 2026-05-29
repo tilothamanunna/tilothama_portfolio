@@ -1,0 +1,264 @@
+<style>
+/* 1. Unified Variables (Matching Resume Theme) */
+:root {
+    --accent: #131314; /* Matching your Resume Blue */
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --border: #ddd;
+    --text-main: #212529;
+    --text-muted: #6c757d;
+    --font-family: 'Inter', -apple-system, sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg);
+    color: var(--text-main);
+    margin: 0;
+}
+
+/* 2. Professional Navigation (Matching Resume Page) */
+.nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    margin-left: 2rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--accent);
+}
+
+/* 3. Project Grid Styling */
+.project-section {
+    padding: 60px 8%;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px; /* Matching Resume Form-box radius */
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    border-color: var(--accent);
+}
+
+/* 4. Text Formatting (The "Word Formats" Fix) */
+.category-tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.8rem;
+}
+
+.project-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+    color: #333;
+}
+
+.project-desc {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.outcome-highlight {
+    background: rgba(0, 123, 255, 0.05);
+    border-left: 4px solid var(--accent);
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    color: #004a99;
+}
+
+/* 5. Buttons (Matching Resume Submit Button) */
+.btn-group {
+    display: flex;
+    gap: 10px;
+}
+
+.primary-btn, .secondary-btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-align: center;
+    transition: 0.3s;
+    flex: 1;
+}
+
+.primary-btn {
+    background-color: var(--accent);
+    color: white;
+    border: none;
+}
+
+.primary-btn:hover {
+    opacity: 0.9;
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+}
+
+.secondary-btn:hover {
+    background: #f1f2f6;
+    color: var(--text-main);
+}
+
+.tech-stack {
+    margin-bottom: 15px;
+}
+</style>
+<!-- Navigation -->
+<nav class="nav-bar">
+    <div class="logo"><strong>TN</strong></div>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html" class="active">Projects</a>
+            <a href="resume.html">Resume</a>
+            <a href="contact.html">Contact</a>
+    </div>
+</nav>
+
+<!-- Projects -->
+<section id="projects" class="project-section">
+    <h1 style="color: #0a0a0a; margin-bottom: 3rem; font-size: 3rem;">Projects</h1>
+    
+    <div class="project-grid">
+        <!-- 1. Adidas -->
+        <div class="project-card">
+            <span class="category-tag">Data Science & Predictive Modeling</span>
+            <h3 class="project-title">Adidas Retail Performance</h3>
+            <div class="tech-stack">
+                <img src="https://img.shields.io/badge/SAS_Viya-007CC3?style=flat-square&logo=sas&logoColor=white">
+                <img src="https://img.shields.io/badge/Tableau-E97627?style=flat-square&logo=tableau&logoColor=white">
+            </div>
+            <p class="project-desc">Built a classification model on 9,600+ transactions to uncover customer purchasing patterns and regional revenue trends.</p>
+            <div class="outcome-highlight">
+                <strong>Result:</strong> Achieved 93% accuracy; identified segments driving 35% of revenue.
+            </div>
+            <div class="btn-group">
+                <a href="https://public.tableau.com/app/profile/tilothama.nunna5081/viz/Adidassalesdashboard_17668976328880/SalesandRetailerPerformenceDashboard" target="_blank" class="primary-btn">Live Dashboard</a>
+                <a href="https://public.tableau.com/app/profile/tilothama.nunna5081/viz/Adidassalesdashboard2/Dashboard3" target="_blank" class="secondary-btn">Retailer View</a>
+            </div>
+        </div>
+
+        <!-- 2. Financial Complaints -->
+        <div class="project-card">
+            <span class="category-tag">Data Visualization</span>
+            <h3 class="project-title">Financial Complaint Intel</h3>
+            <div class="tech-stack">
+                <img src="https://img.shields.io/badge/Tableau-E97627?style=flat-square&logo=tableau&logoColor=white">
+                <img src="https://img.shields.io/badge/KPI_Design-00d2ff?style=flat-square">
+            </div>
+            <p class="project-desc">Interactive mapping of federal consumer complaints across all 50 states to isolate systemic financial risks.</p>
+            <div class="outcome-highlight">
+                <strong>Result:</strong> Accelerated systemic risk detection by 15% for state-level anomalies.
+            </div>
+            <a href="https://public.tableau.com/app/profile/tilothama.nunna5081/viz/CreditcardcomplaintsDashboard_17668944889250/Dashboard1" target="_blank" class="primary-btn">View Analysis</a>
+        </div>
+
+        <!-- 3. CystaSense -->
+        <div class="project-card">
+            <span class="category-tag">Health Analytics</span>
+            <h3 class="project-title">CystaSense AI</h3>
+            <div class="tech-stack">
+                <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white">
+                <img src="https://img.shields.io/badge/Clinical_Data-00d2ff?style=flat-square">
+            </div>
+            <p class="project-desc">A health analytics platform for PCOS clinical data analysis, presented at the Fogelman Research Colloquium.</p>
+            <div class="outcome-highlight">
+                <strong>Result:</strong> Modernized clinical data auditing for faster insight generation.
+            </div>
+            <a href="https://systasence-forpcod.onrender.com/" target="_blank" class="primary-btn">Launch Platform</a>
+        </div>
+
+        <!-- 4. Netflix Intelligence -->
+        <div class="project-card">
+            <span class="category-tag">Business Intelligence</span>
+            <h3 class="project-title">Netflix Intelligence</h3>
+            <div class="tech-stack">
+                <img src="https://img.shields.io/badge/R_Shiny-276DC3?style=flat-square&logo=r&logoColor=white">
+                <img src="https://img.shields.io/badge/Narrative-00d2ff?style=flat-square">
+            </div>
+            <p class="project-desc">Analyzed Netflix streaming trends, genre distributions, and release patterns to identify regional growth opportunities.</p>
+            <div class="outcome-highlight">
+                <strong>Result:</strong> Visualized global narrative trends to inform procurement strategies.
+            </div>
+            <a href="https://tilothama.shinyapps.io/netflix_intelligence_dashboard/" target="_blank" class="primary-btn">Explore Data</a>
+        </div>
+
+        <!-- 5. Client Web Architecture -->
+        <div class="project-card">
+            <span class="category-tag">Frontend Development</span>
+            <h3 class="project-title">Pressley & Personal Web</h3>
+            <div class="tech-stack">
+                <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black">
+                <img src="https://img.shields.io/badge/Lighthouse-100/100-success?style=flat-square">
+            </div>
+            <p class="project-desc">Professionally designed, mobile-first responsive interfaces optimized for performance and SEO.</p>
+            <div class="outcome-highlight">
+                <strong>Result:</strong> Achieved perfect performance scores on real-world client audits.
+            </div>
+            <div class="btn-group">
+                <a href="https://tilothamanunna.github.io/websiteforPressley/" target="_blank" class="primary-btn">Pressley Site</a>
+                <a href="https://tilothamanunna.github.io/website2/" target="_blank" class="secondary-btn">Personal UI</a>
+            </div>
+        </div>
+
+        <!-- 6. Logic Game -->
+        <div class="project-card">
+            <span class="category-tag">Interactive Logic</span>
+            <h3 class="project-title">Memory Architecture Game</h3>
+            <div class="tech-stack">
+                <img src="https://img.shields.io/badge/Vanilla_JS-F7DF1E?style=flat-square&logo=javascript&logoColor=black">
+                <img src="https://img.shields.io/badge/State_Mgmt-00d2ff?style=flat-square">
+            </div>
+            <p class="project-desc">Engineering complex state management for real-time match detection and performance tracking.</p>
+            <div class="outcome-highlight">
+                <strong>Result:</strong> Demonstrated mastery of DOM manipulation and logic-heavy programming.
+            </div>
+            <a href="https://tilothamanunna.github.io/MemoryMatchGame/" target="_blank" class="primary-btn">Play Game</a>
+        </div>
+    </div>
+</section>

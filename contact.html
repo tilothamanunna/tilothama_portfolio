@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Tilothama Nunna</title>
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+        .contact-container {
+            display: flex;
+            gap: 4rem;
+            padding: 8rem 0;
+            min-height: 80vh;
+        }
+        .contact-info { flex: 1; }
+        .contact-form { 
+            flex: 1.2; 
+            background: var(--card-bg); 
+            padding: 3rem; 
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; opacity: 0.7; }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid var(--border);
+            background: var(--bg);
+            color: var(--text);
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+        .submit-btn {
+            background: var(--accent);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s;
+            width: 100%;
+        }
+        .submit-btn:hover { transform: translateY(-2px); filter: brightness(1.1); }
+        
+        /* Nav Link Styles for Socials */
+        .nav-links a.social-link {
+            font-weight: 700;
+            color: var(--accent);
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+        .nav-links a.social-link:hover { opacity: 0.7; }
+
+        @media (max-width: 1024px) {
+            .contact-container { flex-direction: column; padding: 4rem 0; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="container-wide">
+        <div class="logo"><strong>TN</strong></div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="resume.html">Resume</a>
+            <a href="contact.html" class="active">Contact</a>
+            <span style="border-left: 1px solid var(--border); margin: 0 15px; height: 20px;"></span>
+            
+            <!-- FIXED SOCIAL LINKS -->
+            <a href="https://www.linkedin.com/in/ntilothama" target="_blank" class="social-link" title="LinkedIn">LinkedIn</a>
+            <a href="https://github.com/tilothamanunna" target="_blank" class="social-link" title="GitHub">GitHub</a>
+            <button id="theme-btn">◐</button>
+        </div>
+    </nav>
+
+    <section class="container-wide">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h1 class="hero-name" style="font-size: 3.5rem;">Let's Connect.</h1>
+                <p style="font-size: 1.2rem; opacity: 0.8; line-height: 1.6; margin-bottom: 2rem;">
+                    Whether you have a question about my research at the University of Memphis or want to discuss a potential collaboration in Data Analytics or Mainframe systems, my inbox is always open.
+                </p>
+                <div style="margin-top: 2rem; line-height: 2;">
+                    <p><strong>Email:</strong> <a href="mailto:tnunna@memphis.edu" style="color: var(--accent); text-decoration: none;">tnunna@memphis.edu</a></p>
+                    <p><strong>Location:</strong> Memphis, TN</p>
+                </div>
+            </div>
+
+            <!-- FORMSPREE INTEGRATION -->
+            <div class="contact-form">
+                <form action="https://formspree.io/f/mredorvr" method="POST">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" name="_replyto" placeholder="yourname@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Subject</label>
+                        <input type="text" name="_subject" placeholder="Project Inquiry">
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea name="message" rows="5" placeholder="How can I help you?" required></textarea>
+                    </div>
+                    <!-- Hidden field to prevent spam -->
+                    <input type="text" name="_gotcha" style="display:none">
+                    
+                    <button type="submit" class="submit-btn">Send Message →</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="container-wide" style="padding: 5rem 0; text-align: center; border-top: 1px solid var(--border);">
+        <p style="opacity: 0.5;">© 2026 Tilothama Nunna | Memphis, TN</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
