@@ -5,239 +5,219 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tilothama Nunna | Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Modern Layout: Wide Container & Right-Aligned Image */
-        .container-wide {
-            padding: 0 5%;
-            width: 100%;
-            max-width: 100%;
-        }
-
-        .hero-split {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            min-height: 85vh;
-            gap: 2rem;
-            padding-top: 2rem;
-        }
-
-        .hero-content {
-            flex: 1.5;
-            padding-right: 2rem;
-        }
-
-        .hero-image-container {
-            flex: 1;
-            display: flex;
-            justify-content: flex-end;
-        }
-
-        .hero-profile-img {
-            width: 450px;
-            height: 450px;
-            border-radius: 50%;
-            object-fit: cover;
-            aspect-ratio: 1 / 1;
-            border: 4px solid var(--accent);
-            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
-        }
-
-        .hero-name {
-            font-size: 5.0rem;
-            line-height: 1;
-            font-weight: 800;
-            letter-spacing: -3px;
-            margin-bottom: 1.5rem;
-            color: var(--text);
-        }
-
-        .hero-role {
-            font-size: 1.8rem;
-            color: var(--accent);
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-        }
-
-        @media (max-width: 1024px) {
-            .hero-split { flex-direction: column-reverse; text-align: center; }
-            .hero-content { padding-right: 0; margin-top: 3rem; }
-            .hero-image-container { justify-content: center; }
-            .hero-profile-img { width: 320px; height: 320px; }
-            .hero-name { font-size: 4rem; }
-        }
-    </style>
 </head>
 <body>
+
+    <!-- NAVIGATION -->
     <nav class="container-wide">
         <div class="logo"><strong>TN</strong></div>
+
+        <!-- Desktop links -->
         <div class="nav-links">
             <a href="index.html" class="active">Home</a>
             <a href="skills.html">Skills</a>
             <a href="projects.html">Projects</a>
             <a href="resume.html">Resume</a>
             <a href="contact.html">Contact</a>
-            
-            <span style="border-left: 1px solid var(--border); margin: 0 15px; height: 20px;"></span>
+            <span style="border-left: 1px solid var(--border); margin: 0 4px; height: 20px;"></span>
             <a href="https://www.linkedin.com/in/ntilothama" target="_blank" title="LinkedIn">in</a>
             <a href="https://github.com/tilothamanunna" target="_blank" title="GitHub">gh</a>
-            
-            <button id="theme-btn">◐</button>
+            <button id="theme-btn">&#9680;</button>
         </div>
+
+        <!-- Hamburger (mobile only) -->
+        <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </nav>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-nav" id="mobile-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://www.linkedin.com/in/ntilothama" target="_blank">LinkedIn</a>
+        <a href="https://github.com/tilothamanunna" target="_blank">GitHub</a>
+    </div>
 
     <!-- HERO SECTION -->
     <section class="container-wide">
         <div class="hero-split">
+
             <div class="hero-content">
-                <!-- HTML: Simple & Direct -->
-<h1 class="hero-name">
-    Tilothama Nunna
-</h1>
+                <h1 class="hero-name">Tilothama Nunna</h1>
                 <p class="hero-role">Data Analyst | Software Engineer | Mainframe Developer</p>
-                <p style="font-size: 1.25rem; max-width: 650px; margin-bottom: 2.5rem; opacity: 0.8; line-height: 1.6;">
-                    Senior Software Engineer with nearly 3 years of enterprise experience at Capgemini (ANZ Bank), 
-                    now pursuing an MS in Information Systems at the University of Memphis. Bridging enterprise systems 
+                <p class="hero-desc">
+                    Senior Software Engineer with nearly 3 years of enterprise experience at Capgemini (ANZ Bank),
+                    now pursuing an MS in Information Systems at the University of Memphis. Bridging enterprise systems
                     with modern analytics and intelligent decision-making.
                 </p>
-                
-                <div style="display: flex; gap: 1.2rem; flex-wrap: wrap;">
-                    <a href="projects.html" class="btn primary">View Projects →</a>
+
+                <div class="hero-btns">
+                    <a href="projects.html" class="btn primary">View Projects &rarr;</a>
                     <a href="contact.html" class="btn secondary">Get In Touch</a>
                 </div>
 
-                <!-- REFINED METRICS ROW -->
-<<!-- REPLACE YOUR METRIC DIV WITH THIS -->
-<!-- REFINED METRICS BAR -->
-<div style="display: flex; gap: 4rem; margin-top: 4rem; padding-top: 2.5rem; border-top: 1px solid var(--border);">
-    
-    <!-- Experience -->
-    <div style="display: flex; flex-direction: column; gap: 0.2rem;">
-        <div style="display: flex; align-items: baseline;">
-            <span style="font-size: 2.8rem; font-weight: 800; color: var(--text); line-height: 1;">3.5</span>
-            <span style="font-size: 1.8rem; font-weight: 800; color: var(--accent); margin-left: 2px;">+</span>
-        </div>
-        <span style="font-size: 0.7rem; font-weight: 700; opacity: 0.5; text-transform: uppercase; letter-spacing: 2px;">Years Professional</span>
-    </div>
-
-    <!-- Accuracy -->
-    <div style="display: flex; flex-direction: column; gap: 0.2rem;">
-        <div style="display: flex; align-items: baseline;">
-            <span style="font-size: 2.8rem; font-weight: 800; color: var(--text); line-height: 1;">93</span>
-            <span style="font-size: 1.5rem; font-weight: 800; color: var(--accent); margin-left: 2px;">%</span>
-        </div>
-        <span style="font-size: 0.7rem; font-weight: 700; opacity: 0.5; text-transform: uppercase; letter-spacing: 2px;">Model Accuracy</span>
-    </div>
-
-    <!-- GPA -->
-    <div style="display: flex; flex-direction: column; gap: 0.2rem;">
-        <span style="font-size: 2.8rem; font-weight: 800; color: var(--text); line-height: 1;">3.66</span>
-        <span style="font-size: 0.7rem; font-weight: 700; opacity: 0.5; text-transform: uppercase; letter-spacing: 2px;">Graduate GPA</span>
-    </div>
-
-</div>
+                <!-- Metrics Bar -->
+                <div class="metrics-bar">
+                    <div class="metric-item">
+                        <div class="metric-value-row">
+                            <span class="metric-number">3.5</span>
+                            <span class="metric-unit">+</span>
+                        </div>
+                        <span class="metric-label">Years Professional</span>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-value-row">
+                            <span class="metric-number">93</span>
+                            <span class="metric-unit">%</span>
+                        </div>
+                        <span class="metric-label">Model Accuracy</span>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-value-row">
+                            <span class="metric-number">3.66</span>
+                        </div>
+                        <span class="metric-label">Graduate GPA</span>
+                    </div>
+                </div>
             </div>
 
             <div class="hero-image-container">
                 <img src="images/profile.jpg" alt="Tilothama Nunna" class="hero-profile-img">
             </div>
+
         </div>
     </section>
 
     <!-- ABOUT SECTION -->
-<section class="container-wide" style="padding: 8rem 0; background: var(--card-bg); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
-    <div style="display: flex; align-items: center; justify-content: space-between; gap: 5%; max-width: 1400px; margin: 0 auto; width: 100%;">
-        
-        <!-- Left Side: The Technical Transition Box (Now on Left) -->
-       <div style="flex: 1; min-width: 320px; padding: 1rem;">
-    <div style="position: relative; padding-left: 40px; border-left: 2px dashed var(--accent);">
-        <!-- Step 1 -->
-        <div style="margin-bottom: 3rem; position: relative;">
-            <div style="position: absolute; left: -51px; top: 0; width: 20px; height: 20px; background: var(--card-bg); border: 3px solid var(--accent); border-radius: 50%;"></div>
-            <h4 style="font-size: 0.8rem; letter-spacing: 1px; color: var(--accent); margin-bottom: 0.5rem; text-transform: uppercase;">The Foundation</h4>
-            <p style="font-weight: 700; font-size: 1.1rem; margin-bottom: 0.5rem;">Enterprise Systems</p>
-            <p style="font-size: 0.95rem; opacity: 0.7;">COBOL, DB2, CICS, JCL</p>
-        </div>
+    <section class="about-section">
+        <div class="container-wide">
+            <div class="about-inner">
 
-        <!-- Connection Icon -->
-        <div style="margin-bottom: 3rem; opacity: 0.3;">
-            <span style="font-size: 1.5rem;">+</span>
-        </div>
+                <!-- Left: Technical Transition -->
+                <div class="about-left">
+                    <div class="about-timeline-box">
+                        <div class="about-step">
+                            <div class="about-step-dot"></div>
+                            <h4>The Foundation</h4>
+                            <p class="step-title">Enterprise Systems</p>
+                            <p class="step-sub">COBOL, DB2, CICS, JCL</p>
+                        </div>
+                        <div class="about-connector">+</div>
+                        <div class="about-step">
+                            <div class="about-step-dot filled"></div>
+                            <h4>The Future</h4>
+                            <p class="step-title">Intelligent Analytics</p>
+                            <p class="step-sub">Python, SQL, ML, Tableau</p>
+                        </div>
+                    </div>
+                </div>
 
-        <!-- Step 2 -->
-        <div style="position: relative;">
-            <div style="position: absolute; left: -51px; top: 0; width: 20px; height: 20px; background: var(--accent); border: 3px solid var(--accent); border-radius: 50%;"></div>
-            <h4 style="font-size: 0.8rem; letter-spacing: 1px; color: var(--accent); margin-bottom: 0.5rem; text-transform: uppercase;">The Future</h4>
-            <p style="font-weight: 700; font-size: 1.1rem; margin-bottom: 0.5rem;">Intelligent Analytics</p>
-            <p style="font-size: 0.95rem; opacity: 0.7;">Python, SQL, ML, Tableau</p>
-        </div>
-    </div>
-</div>
-        <!-- Right Side: The Story (Now on Right) -->
-        <div style="flex: 1.4; min-width: 400px;">
-            <h2 style="font-size: 3.2rem; margin-bottom: 2rem; letter-spacing: -1.5px; line-height: 1.1; color: var(--text);">From Mainframes to Modern Analytics</h2>
-            <p style="font-size: 1.3rem; line-height: 1.8; opacity: 0.9; margin-bottom: 1.5rem;">
-                I began my career building mission-critical enterprise payment systems at <strong>Capgemini (ANZ Bank)</strong>, the experience of working in mainframes provided a bedrock understanding of high-volume data governance.
-            </p>
-            <p style="font-size: 1.3rem; line-height: 1.8; opacity: 0.9;">
-                Today, at the <strong>University of Memphis</strong>, I am evolving that foundation. By integrating enterprise-grade rigor with advanced machine learning and data storytelling, I transform raw numbers into strategic business intelligence.
-            </p>
-        </div>
+                <!-- Right: Story -->
+                <div class="about-right">
+                    <h2>From Mainframes to Modern Analytics</h2>
+                    <p>
+                        I began my career building mission-critical enterprise payment systems at
+                        <strong>Capgemini (ANZ Bank)</strong>, the experience of working in mainframes provided
+                        a bedrock understanding of high-volume data governance.
+                    </p>
+                    <p>
+                        Today, at the <strong>University of Memphis</strong>, I am evolving that foundation.
+                        By integrating enterprise-grade rigor with advanced machine learning and data storytelling,
+                        I transform raw numbers into strategic business intelligence.
+                    </p>
+                </div>
 
-    </div>
-</section>
-
-    <!-- CAREER JOURNEY SECTION -->
-    <section class="container-wide" style="padding: 8rem 0;">
-        <h2 style="text-align: center; margin-bottom: 4rem;">Career Evolution</h2>
-        <div style="max-width: 900px; margin: 0 auto; position: relative; padding-left: 50px; border-left: 2px solid var(--accent);">
-            
-            <div style="margin-bottom: 5rem; position: relative;">
-                <div style="position: absolute; left: -61px; top: 0; width: 22px; height: 22px; border-radius: 50%; background: var(--accent);"></div>
-                <h4 style="color: var(--accent); font-weight: 700;">OCT 2025 – JAN 2026</h4>
-                <h3 style="font-size: 1.8rem;">Research Assistant — CystaSense Project</h3>
-                <p style="font-size: 1.1rem; color: var(--text); margin-bottom: 1rem;">University of Memphis | Memphis, TN</p>
-                <ul style="list-style: none; padding-left: 0; opacity: 0.8; line-height: 1.6;">
-                    <li>• Managed confidential healthcare records for research participants, maintaining strict adherence to PII privacy protocols.</li>
-                    <li>• Developed a Python-based healthcare application for symptom tracking and behavioral pattern analysis.</li>
-                    <li>• Secured a research grant to support project development and continued data analysis efforts.</li>
-                    <li>• Presented research findings at the Fogelman College of Business and Economics Research Colloquium.</li>
-                </ul>
             </div>
+        </div>
+    </section>
 
-            <div style="margin-bottom: 5rem; position: relative;">
-                <div style="position: absolute; left: -61px; top: 0; width: 22px; height: 22px; border-radius: 50%; background: var(--border); border: 2px solid var(--accent);"></div>
-                <h4 style="color: var(--accent); font-weight: 700;">OCT 2023 – JUL 2025</h4>
-                <h3 style="font-size: 1.8rem;">Senior Software Engineer, Mainframe</h3>
-                <p style="font-size: 1.1rem; color: var(--text); margin-bottom: 1rem;">Capgemini (ANZ Bank) | Bangalore, India</p>
-                <ul style="list-style: none; padding-left: 0; opacity: 0.8; line-height: 1.6;">
-                    <li>• Managed high-integrity databases processing 2M+ daily transactions with 99.8% reconciliation accuracy.</li>
-                    <li>• Optimized settlement workflows using DB2 stored procedures, reducing processing time by 18%.</li>
-                    <li>• Delivered TRAMS Upgrade and EFTPOS projects with a 90%+ on-time rate through rigorous scheduling.</li>
-                    <li>• Resolved high-priority production issues and developed error-handling routines for system stability.</li>
-                </ul>
-            </div>
+    <!-- CAREER SECTION -->
+    <section class="career-section">
+        <div class="container-wide">
+            <h2>Career Evolution</h2>
+            <div class="career-timeline">
 
-            <div style="position: relative;">
-                <div style="position: absolute; left: -61px; top: 0; width: 22px; height: 22px; border-radius: 50%; background: var(--border);"></div>
-                <h4 style="color: var(--accent); font-weight: 700;">Dec 2022 – OCT 2023</h4>
-                <h3 style="font-size: 1.8rem;">Software Engineer, Mainframe</h3>
-                <p style="font-size: 1.1rem; color: var(--text); margin-bottom: 1rem;">Capgemini | Pune, India</p>
-                <ul style="list-style: none; padding-left: 0; opacity: 0.8; line-height: 1.6;">
-                    <li>• Developed COBOL applications integrated with VisionPLUS for card and payments processing.</li>
-                    <li>• Built JCL-orchestrated ETL jobs to extract VSAM data and load into DB2 for reporting and audit trails.</li>
-                    <li>• Reduced application downtime by 22% through proactive monitoring and rapid incident response.</li>
-                    <li>• Collaborated with business analysts and QA teams to validate requirements in an Agile environment.</li>
-                </ul>
+                <div class="career-item">
+                    <div class="career-dot"></div>
+                    <p class="career-date">OCT 2025 &ndash; JAN 2026</p>
+                    <h3 class="career-title">Research Assistant &mdash; CystaSense Project</h3>
+                    <p class="career-company">University of Memphis | Memphis, TN</p>
+                    <ul class="career-list">
+                        <li>Managed confidential healthcare records for research participants, maintaining strict adherence to PII privacy protocols.</li>
+                        <li>Developed a Python-based healthcare application for symptom tracking and behavioral pattern analysis.</li>
+                        <li>Secured a research grant to support project development and continued data analysis efforts.</li>
+                        <li>Presented research findings at the Fogelman College of Business and Economics Research Colloquium.</li>
+                    </ul>
+                </div>
+
+                <div class="career-item">
+                    <div class="career-dot outlined"></div>
+                    <p class="career-date">OCT 2023 &ndash; JUL 2025</p>
+                    <h3 class="career-title">Senior Software Engineer, Mainframe</h3>
+                    <p class="career-company">Capgemini (ANZ Bank) | Bangalore, India</p>
+                    <ul class="career-list">
+                        <li>Managed high-integrity databases processing 2M+ daily transactions with 99.8% reconciliation accuracy.</li>
+                        <li>Optimized settlement workflows using DB2 stored procedures, reducing processing time by 18%.</li>
+                        <li>Delivered TRAMS Upgrade and EFTPOS projects with a 90%+ on-time rate through rigorous scheduling.</li>
+                        <li>Resolved high-priority production issues and developed error-handling routines for system stability.</li>
+                    </ul>
+                </div>
+
+                <div class="career-item">
+                    <div class="career-dot empty"></div>
+                    <p class="career-date">Dec 2022 &ndash; OCT 2023</p>
+                    <h3 class="career-title">Software Engineer, Mainframe</h3>
+                    <p class="career-company">Capgemini | Pune, India</p>
+                    <ul class="career-list">
+                        <li>Developed COBOL applications integrated with VisionPLUS for card and payments processing.</li>
+                        <li>Built JCL-orchestrated ETL jobs to extract VSAM data and load into DB2 for reporting and audit trails.</li>
+                        <li>Reduced application downtime by 22% through proactive monitoring and rapid incident response.</li>
+                        <li>Collaborated with business analysts and QA teams to validate requirements in an Agile environment.</li>
+                    </ul>
+                </div>
+
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="container-wide" style="padding: 5rem 0; text-align: center; border-top: 1px solid var(--border);">
-        <p style="opacity: 0.5;">© 2026 Tilothama Nunna | Senior Engineer & Data Analyst</p>
+    <footer class="container-wide">
+        <p>&copy; 2026 Tilothama Nunna | Senior Engineer &amp; Data Analyst</p>
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Hamburger toggle
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const mobileNav = document.getElementById('mobile-nav');
+
+        hamburgerBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            hamburgerBtn.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+        });
+
+        // Close on link tap
+        mobileNav.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                hamburgerBtn.classList.remove('active');
+                mobileNav.classList.remove('active');
+            });
+        });
+
+        // Close on outside tap
+        document.addEventListener('click', function(e) {
+            if (!hamburgerBtn.contains(e.target) && !mobileNav.contains(e.target)) {
+                hamburgerBtn.classList.remove('active');
+                mobileNav.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>
